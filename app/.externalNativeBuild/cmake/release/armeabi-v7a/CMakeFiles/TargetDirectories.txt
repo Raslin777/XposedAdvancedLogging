@@ -1,3 +1,0 @@
-C:/Users/wmarino/Android Projects/XposedAdvancedLogging/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/xposedjnihook.dir
-C:/Users/wmarino/Android Projects/XposedAdvancedLogging/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
-C:/Users/wmarino/Android Projects/XposedAdvancedLogging/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir
