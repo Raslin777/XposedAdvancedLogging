@@ -1,0 +1,183 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="TestNewCheck"
+            android:summary="@string/TestNewCheck"
+            android:title="Hook Lib Files" />
+         -->
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="BypassSSL"
+            android:summary="Attempts to bypass SSL Pinning"
+            android:title="Bypass SSL Pin" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="CreateGcore"
+            android:title="This will attempt to GCore the app"
+            android:summary="Gcore located on external sd card"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="DumpDexFile"
+            android:summary="Attempts to dump Dex File"
+            android:title="This will dump dex to /data/data/app" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="PackagePathRedirect"
+            android:summary="@string/pref_description_package_path_redirect"
+            android:title="@string/pref_title_package_path_redirect" />
+    <!--
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="WaitForDebug"
+                android:summary="Attempts log il2cpp information"
+                android:title="Il2cpp Logger" />
+
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:key="OldLibhideInject"
+                    android:summary="OldLibhideInject"
+                    android:title="OldLibhideInject" />
+                    -->
+    <EditTextPreference
+        android:defaultValue="false"
+        android:key="GrepMethodRedirect"
+        android:summary="Grep the Hook all methods"
+        android:title="Grep Hook All Methods" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="LogAllClasses"
+        android:summary="@string/pref_description_log_all_classes"
+        android:title="@string/pref_title_log_all_classes" />
+    <EditTextPreference
+        android:defaultValue=""
+        android:inputType="text"
+        android:key="GrepClass"
+        android:selectAllOnFocus="true"
+        android:title="@string/pref_title_Grep_Classes"
+        android:summary="@string/pref_description_Grep_Classes"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="MethodRedirect"
+        android:summary="@string/pref_description_method_redirect"
+        android:title="@string/pref_title_method_redirect" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="PlaceHolding"
+        android:summary="@string/pref_description_Grab_Fields"
+        android:title="Hook Fields" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="DecodeHex"
+        android:summary="@string/pref_description_Decode_Hex"
+        android:title="DecodeHex" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="DumpMethodReturn"
+        android:summary="@string/pref_description_dump_method"
+        android:title="@string/pref_title_dump_method" />
+    <EditTextPreference
+        android:defaultValue=""
+        android:inputType="text"
+        android:key="MethodReturnClass"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_dump_method_class" />
+    <EditTextPreference
+        android:defaultValue="text"
+        android:inputType="text"
+        android:key="MethodReturnMethod"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_dump_method_method" />
+    <EditTextPreference
+        android:defaultValue="text"
+        android:inputType="text"
+        android:key="MethodReturnChange"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_dump_method_change" />
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="LibInjections"
+        android:summary="@string/pref_description_sig_check_true"
+        android:title="@string/pref_title_sig_check_true" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="strstr"
+            android:summary="strstr"
+            android:title="strstr" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="fopen"
+            android:summary="fopen"
+            android:title="fopen" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="readdir"
+            android:summary="readdir"
+            android:title="readdir" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="unlink"
+            android:summary="unlink"
+            android:title="unlink" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="ptrace"
+            android:summary="ptrace"
+            android:title="ptrace" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="blockptrace"
+            android:summary="blockptrace"
+            android:title="blockptrace" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="open"
+            android:summary="open"
+            android:title="open" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prctl"
+            android:summary="prctl"
+            android:title="prctl" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="mprotect"
+            android:summary="mprotect/mmap"
+            android:title="mprotect/mmap" />
+       <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="dump_mmap"
+            android:summary="dump_mmap to sdcard/prodump"
+            android:title="dump_mmap" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="dump_mprotect"
+            android:summary="dump_mprotect to sdcard/prodump"
+            android:title="dump_mprotect" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="mono_image_open_from_data_with_name"
+            android:summary="mono_image_open_from_data_with_name"
+            android:title="mono_image_open_from_data_with_name" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="kill"
+            android:summary="kill"
+            android:title="kill" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="strcpy"
+            android:summary="strcpy"
+            android:title="strcpy" />
+
+</PreferenceScreen>

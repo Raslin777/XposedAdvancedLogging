@@ -1,0 +1,29 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditTextPreference
+        android:defaultValue=""
+        android:lines="8"
+        android:minLines="2"
+        android:inputType="textMultiLine"
+        android:key="PermissionsInject"
+        android:maxLines="10"
+        android:selectAllOnFocus="true"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:title="App Perm(com.blabla.bla) REQUIRES REBOOT "/>
+    <EditTextPreference
+        android:defaultValue=""
+        android:lines="8"
+        android:minLines="2"
+        android:inputType="textMultiLine"
+        android:key="PermissionsAdd"
+        android:maxLines="10"
+        android:selectAllOnFocus="true"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:title="Perm To add android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="DebugDex"
+        android:summary="Debug All Android Dalvik"
+        android:title="Debug Dex Files" />
+</PreferenceScreen>

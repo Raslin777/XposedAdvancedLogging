@@ -1,0 +1,65 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.raslin777.advancedLogging">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="org.raslin777.advancedLogging.advancedLogging"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" >
+        <service
+            android:enabled="true"
+            android:exported="true"
+            android:name="org.raslin777.advancedLogging.GcoreService">
+            <intent-filter>
+                <action android:name="org.raslin777.advancedLogging.GcoreService.START_SERVICE" />
+            </intent-filter>
+
+        </service>
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="30" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Allow apply some hacking to applications." />
+
+        <activity
+            android:name="org.raslin777.advancedLogging.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="org.raslin777.advancedLogging.SettingsActivityNative"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="org.raslin777.advancedLogging.TabsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_tabs" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="org.raslin777.advancedLogging.MyReceiver">
+            <intent-filter>
+                <action android:name="com.Raslin.Broadcast">
+                </action>
+            </intent-filter>
+        </receiver><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>
