@@ -7,8 +7,8 @@ android {
         applicationId "org.raslin777.advancedLogging"
         minSdkVersion 19
         targetSdkVersion 24
-        versionCode 12
-        versionName "1.6.5"
+        versionCode 13
+        versionName "1.6.5.1"
         multiDexEnabled true
 
         ndk {
