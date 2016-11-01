@@ -1103,7 +1103,7 @@ public class HackService implements IXposedHookZygoteInit, IXposedHookLoadPackag
                         param.setResult(true);
                         XposedBridge.log("We Change Method with bool true");
                     } else if (ReturnString.equals("!false")) {
-                        param.setResult(true);
+                        param.setResult(false);
                         XposedBridge.log("We Change Method with bool false");
                     } else if (checkint2) {
                         Integer ReturnStringInt = Integer.parseInt(ReturnString);
