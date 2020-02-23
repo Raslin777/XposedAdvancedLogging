@@ -165,7 +165,8 @@ public class TabsActivity extends FragmentActivity implements AppListAdapter.Dat
 
 	@SuppressLint("WorldReadableFiles")
 	private void loadAppSettings(AppInfo app) {
-		SharedPreferences prefs = getApplicationContext().getSharedPreferences("ModSettings", Context.MODE_WORLD_READABLE);
+		
+		SharedPreferences prefs = getApplicationContext().getSharedPreferences("ModSettings", Context.MODE_PRIVATE);
 		if (prefs.getBoolean(app.packageName + "/" + "DumpMethodReturn", false)) {
 			app.MethodReturnClass = prefs.getString(app.packageName + "/" + "MethodReturnClass", "");
 			app.MethodReturnMethod = prefs.getString(app.packageName + "/" + "MethodReturnMethod", "");
@@ -218,7 +219,7 @@ public class TabsActivity extends FragmentActivity implements AppListAdapter.Dat
 
 	@SuppressLint("WorldReadableFiles")
 	void saveAppSettings(Map<String,Object> app) {
-		SharedPreferences prefs = getApplicationContext().getSharedPreferences("ModSettings", Context.MODE_WORLD_READABLE);
+		SharedPreferences prefs = getApplicationContext().getSharedPreferences("ModSettings", Context.MODE_PRIVATE);
 		Editor e = prefs.edit();
 		String packageName = (String)app.get("packageName");
 		e.putBoolean(packageName + "/" + "DumpMethodReturn", app.get("MethodReturnClass") != null);

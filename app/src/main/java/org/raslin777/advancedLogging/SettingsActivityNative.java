@@ -44,7 +44,7 @@ public class SettingsActivityNative extends PreferenceActivity {
 		
 		addPreferencesFromResource(R.xml.native_pref_general);
 
-		SharedPreferences modPrefs = getApplicationContext().getSharedPreferences("ModSettings", Context.MODE_WORLD_READABLE);
+		SharedPreferences modPrefs = getApplicationContext().getSharedPreferences("ModSettings", Context.MODE_PRIVATE);
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 		Editor editor = prefs.edit();
 		for (int i = 0; i < this.getPreferenceScreen().getPreferenceCount(); i++) {
@@ -104,7 +104,7 @@ public class SettingsActivityNative extends PreferenceActivity {
 
 
 
-            SharedPreferences modPrefs = getApplicationContext().getSharedPreferences("ModSettings", Context.MODE_WORLD_READABLE);
+            SharedPreferences modPrefs = getApplicationContext().getSharedPreferences("ModSettings", Context.MODE_PRIVATE);
 			if (preference instanceof CheckBoxPreference) {
 				Editor editor = modPrefs.edit();
 				editor.putBoolean(packageName + "/" + preference.getKey(), (Boolean)value);
